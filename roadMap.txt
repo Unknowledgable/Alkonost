@@ -1,0 +1,37 @@
+Start
+ ↓
+Splash Screen (Branding/Logo)
+ ↓ (Animation Transition)
+Short Welcome Message (Brief Intro to App)
+ ↓
+Login Options
+    ├── Google Login
+    │     └── Triggers Google OAuth Popup
+    ├── Email/Password Login
+    │     └── Displays Input Fields (Email + Password + Submit)
+    └── Guest Mode (Optional)
+          └── Warning: "Guest mode will not save your preferences."
+ ↓
+After Successful Login
+ ↓
+Home Page (Initial Form: Collect Demographics)
+    ├── Display Current Music Recommendations
+    │     ├── Warning: "Initial recommendations are random. Customize your preferences for better suggestions."
+    │     ├── Each Recommendation has Four Buttons:
+    │     │     ├── Like
+    │     │     ├── Dislike
+    │     │     ├── Unknown
+    │     │     └── Comment
+    ├── Top-Right Corner: Profile Button
+          └── Clicking redirects to Profile Page
+                  ├── Display all demographic and preference data
+                  ├── Allow Editing of Demographics (store version history; display current only)
+                  ├── Logo in Top-Left: Return to Home
+                  ├── Return Button (where Profile Button was)
+    ├── Center Button: Go to Preferences Gathering Page
+          └── Preferences Gathering Page
+                  ├── Slider to Choose Preference Gathering Level:
+                      ├── Quick (3 Favorite Artists)
+                      ├── Normal (3 Favorite Artists + 3 Favorite Songs)
+                      ├── Detailed (Normal + 3 Preferred Musical Elements)
+                      ├── Thorough (Detailed + As Many Songs/Artists/Albums as the user can provide — dynamic input)

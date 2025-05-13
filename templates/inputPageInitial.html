@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alokonost Input-Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<form action="/submit" method="POST">
+    <div class="nav_button">
+        <a href="/home">Return to your dashboard</a>
+    </div>
+    <div class="input_fields">
+        <input type="text" name="favoriteArtist0" placeholder="Your favorite artist is...">
+    </div>
+    <div class="input_fields">
+        <input type="text" name="favoriteArtist1" placeholder="Your favorite artist is...">
+    </div>
+    <div class="input_fields">
+        <input type="text" name="favoriteArtist2" placeholder="Your favorite artist is...">
+    </div>
+    <div class="input_fields">
+        <input type="text" name="favoriteSong0" placeholder="Your favorite song is...">
+    </div>
+    <div class="input_fields">
+        <input type="text" name="favoriteSong1" placeholder="Your favorite song is...">
+    </div>
+    <div class="input_fields">
+        <input type="text" name="favoriteSong2" placeholder="Your favorite song is...">
+    </div>
+    <label for="genre">Choose your favorite genres:</label>
+    <select id="genre" name="genre" required>
+        <option value="" disabled selected>Select a Genre</option>
+        <option value="rock">Rock</option>
+        <option value="rap">Rap</option>
+        <option value="country">Country</option>
+        <option value="metal">Metal</option>
+        <option value="latin">Latin</option>
+        <option value="kpop">K-Pop</option>
+        <option value="electronic">Electronic</option>
+        <option value="rnb">R&B</option>
+        <option value="indie">Indie</option>
+    </select>
+    <button type="submit">Submit your answers!</button>
+</form>
+
+<script src="{{url_for('static' , filename='main.js') }}"></script>
+</body>
+</html>
