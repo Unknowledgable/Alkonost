@@ -8,7 +8,7 @@ Alkonost is licensed under the GNU GPL v3, which means that it is free to modify
 
 This project is a learning experience for my first proper and public coding project. If you're reading this, consider checking out any other projects I may have published.
 
-##Technologies  
+**Technologies**
 Backend: Python 3.13 with Flask using the default templating  
 Frontend: JavaScript and CSS for dynamic page rendering  
 Database: PostgreSQL  
