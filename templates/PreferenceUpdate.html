@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+<div class="banner">
+        <a class="banner-logo" href="/homePage"> Alkonost</a>
+        <div class="banner-links">
+            <a href="/preferences">Preference Page</a>
+            <a href="/profile">Profile Page</a>
+        </div>
+    </div>
+
+
+
 <form action="/submit" method="POST">
     <div class="nav_button">
         <a href="/home">Return to your dashboard</a>

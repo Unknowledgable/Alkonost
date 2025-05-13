@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alkonost Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- this is a banner bar, I am trying to keep it like YouTube with a redirect and profile access -->
+    <div class="banner">
+        <a class="banner-logo" href="/homePage"> Alkonost</a>
+        <div class="banner-links">
+            <a href="/preferences">Preference Page</a>
+            <a href="/profile">Profile Page</a>
+        </div>
+    </div>
+
+    <!-- This is the profile content container -->
+    <div class="container" id="profileContainer">
+        <!--User data goes here-->
+        <div class="profile-section" id="UserDemoSection">
+            <h3>Demographics</h3>
+            <ul>
+                <li>Email: <span id="userEmail">users@gmail.com</span></li>
+                <li>Username: <span id="userUsername">UserJessicaDoe</span></li>
+                <li>Full Name: <span id="userFullName">Not Specified</span></li>
+                <li>Age: <span id="userAge">Not Specified</span></li>
+                <li>Gender: <span id="userGender">Not Specified</span></li>
+                <li>Race: <span id="userRace">Not Specified</span></li>
+                <li>Ethnicity: <span id="userEthnicity">Not Specified</span></li>
+                <li>Preferred Language: <span id="userLang">Not Specified</span></li>
+                <li>Preferred Listening Device: <span id="userDevice">Not Specified</span></li>
+                <li>Additional Languages: <span id="userAddLangs">Not Specified</span></li>
+                <li>Preferred Countries: <span id="userCountries">Not Specified</span></li>
+            </ul>
+        </div>
+
+        <!--User music preferences go here-->
+        <div class="profile-section" id="userPrefs">
+            <h3>Previous Musical Preferences</h3>
+            <ul>
+                <li> Favorite Artist: <span id="userPrefArtist">no preference</span></li>
+                <li> Number of Artists Rated: <span id="numofArtistsRated">None Rated</span></li>
+                <li> Favorite Genre: <span id="userPrefGenre">None Rated</span></li>
+                <li> Number of Songs Rated: <span id="numofSongsRated">None Rated</span></li>
+            </ul>
+        </div>
+
+        <!--This is for user options-->
+        <div class="profile-section" id="userSettings">
+            <h3>Personal User Settings</h3>
+            <ul>
+                <li> Theme:
+                    <select id="themeSelector">
+                        <option value="light" selected>light</option>
+                        <option value="dark" selected>Dark</option>
+                        <option value="dynamic" selected>Dynamic</option>
+                    </select>
+                </li>
+                <li>Language:
+                    <select id="langSelector">
+                        <option value="en" selected>English</option>
+                    </select>
+                </li>
+                <li> Content Filter:
+                    <div class="filterButtons">
+                    <button id="userFilter0">Child Friendly</button>
+                    <button id="userFilter1">Adult Friendly</button>
+                    <button id="userFilter2">All Languages</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- I feel like footers make the webpage more professional, so i think this works best-->
+<footer class="footer">
+    <p> Alkonost made by Kristopher Rush. Contact me at kris.rush.projectsfeedback@gmail.com</p>
+</footer>
+<script src="{{url_for('static' , filename='main.js') }}"></script>
+</body>
+</html>

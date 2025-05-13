@@ -18,7 +18,7 @@ def index():
 
 
 def inputs():
-    return render_template("inputPageInitial.html")
+    return render_template("PreferenceUpdate.html")
 @app.route("/submit", methods=["POST"])
 
 def submit():
