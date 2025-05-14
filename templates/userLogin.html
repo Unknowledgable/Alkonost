@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alkonost User Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="banner">
+        <a class="banner-logo" href="/homePage"> Alkonost</a>
+        <div class="banner-links">
+            <a href="/preferences">Preference Page</a>
+            <a href="/profile">Profile Page</a>
+        </div>
+    </div>
+
+    <div class="login-container">
+        <div class="login-form-section">
+            <h1>Welcome to The Alkonost Project!</h1>
+            <p>Please enter your details.</p>
+            <form action="/login" method="POST">
+                <input type="email" name="email" placeholder="Your email address" required>
+                <input type="password" name="password" placeholder="Your password" required>
+                <div class="alt-login">
+                    <label> <input type="checkbox">Remember you?</label>
+                </div>
+                <button type="submit">Click to sign in</button>
+            </form>
+            <button class="Oauth-btn" onclick="alert('google log in is still under development')">
+                <strong>google login (WIP)</strong>
+            </button>
+            <div class="login-footer">
+                Dont have an account? <a href="#">Sign up</a>
+                Forgot password? <a href="#">Reset Password</a>
+            </div>
+        </div>
+
+    </div>
+
+<footer class="footer">
+    <p> Alkonost made by Kristopher Rush. Contact me at kris.rush.projectsfeedback@gmail.com</p>
+</footer>
+<script src="{{url_for('static' , filename='main.js') }}"></script>
+</body>
+</html>

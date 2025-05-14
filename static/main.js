@@ -46,12 +46,19 @@ function initRecs() {
             <h3>"${title}"</h3>
             <p>by ${artist}</p>
             <div class="buttons">
-                <button>Like</button>
-                <button>Dislike</button>
-                <button>Known</button>
+                <button class="recAct" data-title="${title}" data-action="like">Like</button>
+                <button class="recAct" data-title="${title}" data-action="dislike">Dislike</button>
+                <button class="recAct" data-title="${title}" data-action="known">Known</button>
             </div>
             `;
             recList.appendChild(card)
+    });
+    document.querySelectorAll(".recAct").forEach(button => {
+        button.addEventListener("click", () => {
+            const title = button.dataset.title;
+            const action = button.dataset.action;
+            console.log(`User Has marked "${title}" as ${action}`);
+                //TODO fetch this later
     });
 }
 async function initProfile() {
