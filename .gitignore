@@ -1,0 +1,21 @@
+# ─── JSON Data ─────────────────────────────────────────────
+*.json
+
+# ─── Node / Frontend ────────────────────────────────────────
+node_modules/               # npm packages
+npm-debug.log*              # npm error logs
+yarn-debug.log*             # yarn error logs
+yarn-error.log*             # yarn error logs
+package-lock.json           # lockfiles (optional to keep; ignore if you commit yours)
+yarn.lock
+
+# ─── IDE / Editor ───────────────────────────────────────────
+# JetBrains / IntelliJ / PyCharm
+.idea/
+*.iml
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
