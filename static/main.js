@@ -38,17 +38,32 @@ function initRecs() {
     ];
     const shuffled = fisherYatesShuffle(defaultRecs.slice());
     const selected = shuffled.slice(0,3);
-    recList.innerHTML = "";
+    recList.innerHTML = ""
+
     selected.forEach(({title, artist}) => {
+        document.querySelectorAll(".recAct").forEach(button =>{
+            const title = button.getAttribute("feedback-title");
+            const action = button.getAttribute("feedback-title");
+
+            await fetch("/submit_feedback", {
+                method: "POST",
+                header: {
+                    "Content-Type": "application/json"
+                },
+            body:JSON.stringify({title, action})
+            });
+            button.disabled = true;
+            button.classList.add("disabled-button");
+            //TODO Make the css class .disabled-button in order to make the buttons shine after clicking
         const card = document.createElement("div");
         card.className = "recCard";
         card.innerHTML = `
             <h3>"${title}"</h3>
             <p>by ${artist}</p>
             <div class="buttons">
-                <button class="recAct" data-title="${title}" data-action="like">Like</button>
-                <button class="recAct" data-title="${title}" data-action="dislike">Dislike</button>
-                <button class="recAct" data-title="${title}" data-action="known">Known</button>
+                <button class="recAct" feedback-title="${title}" feedback-action="like">Like</button>
+                <button class="recAct" feedback-title="${title}" feedback-action="dislike">Dislike</button>
+                <button class="recAct" feedback-title="${title}" feedback-action="known">Known</button>
             </div>
             `;
             recList.appendChild(card)

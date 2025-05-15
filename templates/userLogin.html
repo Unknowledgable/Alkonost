@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-<div class="banner">
-        <a class="banner-logo" href="/homePage"> Alkonost</a>
+        <!-- this is a banner bar, I am trying to keep it like YouTube with a redirect and profile access -->
+    <div class="banner">
+        <a class="banner-logo" href="/Home"> Alkonost</a>
         <div class="banner-links">
-            <a href="/preferences">Preference Page</a>
-            <a href="/profile">Profile Page</a>
+            <a href="/UserPreferences">Preference Page</a>
+            <a href="/Profile">Profile Page</a>
         </div>
     </div>
 
@@ -18,7 +19,7 @@
         <div class="login-form-section">
             <h1>Welcome to The Alkonost Project!</h1>
             <p>Please enter your details.</p>
-            <form action="/login" method="POST">
+            <form action="/submit_login" method="POST">
                 <input type="email" name="email" placeholder="Your email address" required>
                 <input type="password" name="password" placeholder="Your password" required>
                 <div class="alt-login">
